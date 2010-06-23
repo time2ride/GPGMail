@@ -1,145 +1,303 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Stephane Corthesy" />
+    <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />
+    <title>
+      GPGMail: PGP for Apple's Mail Client
+    </title>
+    <style type="text/css">
+/*<![CDATA[*/
+      
+    body,P,TD,TH,textarea,select,option,submit,input{font-size:12px;font-family:verdana,arial,geneva,helvetica,sans-serif;}
+    code{font-size:13px;font-family:courrier,courrier-new;color: 3399FF;}
+    :link{ color: 0000FF; }
+    :link:hover { color: FF0000; }
+    :visited { color: 3399FF; }
+    :visited:hover { color: FF0000; }
+    :active { color: 0000DD; }
+    :active:hover { color: FF0000; }
+    /*]]>*/
+    </style>
+  </head>
+  <body bgcolor="#FFFFFF">
+    <div align="center">
+      <table border="0" cellpadding="0" cellspacing="0" width="650">
+        <tr>
+          <td align="right" valign="bottom">
+            <img src="images/GPGMail.gif" alt="GPGMail" width="138" height="122" border="0" />
+          </td>
+        </tr>
 
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-	<meta name="author" content="Stephane Corthesy">
-    <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon">
-	<title>GPGMail: PGP for Apple's Mail Client</title>
-	<style type="text/css">	
-body,P,TD,TH,textarea,select,option,submit,input{font-size:12px;font-family:verdana,arial,geneva,helvetica,sans-serif;}
-code{font-size:13px;font-family:courrier,courrier-new;color: 3399FF;}
-:link{ color: 0000FF; }
-:link:hover { color: FF0000; }
-:visited { color: 3399FF; }
-:visited:hover { color: FF0000; }
-:active { color: 0000DD; }
-:active:hover { color: FF0000; }
-	</style>
-</head>
+        <tr>
+          <td align="right" valign="bottom" colspan="2">
+            <img src="images/PoweredByObjC2.gif" alt="Powered by Objective C" />
+          </td>
+        </tr>
 
-<body BGCOLOR="#FFFFFF">
+        <tr>
+          <td colspan="2">
+            <hr noshade="noshade" size="1" />
 
+            <p>
+              <em>Last update: Sunday June 20, 2010</em>
+            </p>
 
-<CENTER>
-<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="650">
-			<TR>
-				<TD ALIGN="RIGHT" VALIGN="BOTTOM"><IMG src="images/GPGMail.gif" ALT="GPGMail" width="138" height="122" border="0"></TD>
-			</TR>
-			<TR>
-				<TD ALIGN="RIGHT" VALIGN="BOTTOM" COLSPAN=2><IMG src="images/PoweredByObjC2.gif" ALT="Powered by Objective C"></TD>
-        </TR><TR><TD colspan=2>
+            <h2>
+              PGP for Apple's Mail
+            </h2>
 
-<HR NOSHADE SIZE=1>
+            <p>
+              <strong>GPGMail is a plug-in for Apple's Mail, providing a front-end to <code>gpg</code> for some operations. It allows you to read/write encrypted messages, as well as electronically signed messages.</strong>
+            </p>
 
-<p><i>Last update: Sunday June 20, 2010</i></p>
+            <p>
+              GPGMail extends Apple's Mail application and allows you to read and send PGP authenticated and/or encrypted messages. You can use GPGMail for plain text and MIME messages, following <a href="index.html#RFC3156">RFC 3156</a>.
+            </p>
 
-<H2><FONT face="Verdana,Arial,Geneva,Sans-serif">PGP for Apple's Mail</font></H2>
+            <p>
+              <strong>GPGMail does not contain any encryption code</strong>: it is a client to <code>gpg</code> executable.
+            </p>
 
-<P><B>GPGMail is a plug-in for Apple's Mail, providing a front-end to <code>gpg</code> for some operations. It allows you to read/write encrypted messages, as well as electronically signed messages.</B></P>
+            <p>
+              GPGMail is a complete hack, relying on Mail's private internal API. Use it at your own risks!
+            </p>
 
-<P>GPGMail extends Apple's Mail application and allows you to read and send PGP authenticated and/or encrypted messages. You can use GPGMail for plain text and MIME messages, following <A HREF="index.html#RFC3156">RFC 3156</A>.</P>
-<P><B>GPGMail does not contain any encryption code</B>: it is a client to <code>gpg</code> executable.</P>
-<P>GPGMail is a complete hack, relying on Mail's private internal API. Use it at your own risks!</P>
-<P ALIGN=CENTER><IMG ALT="English" src="images/US.gif"> <IMG ALT="Espa&ntilde;ol" src="images/ES.gif"> <IMG ALT="Japanese" src="images/JP.gif" BORDER=0> <A HREF="http://gpgmail.org/French.lproj/GPGMail.html"><IMG ALT="Fran&ccedil;ais" src="images/FR.gif" BORDER=0></A> <IMG ALT="Deutsch" src="images/DE.gif"> <!--<IMG ALT="Dansk" src="images/DK.gif">--> <IMG ALT="&#xd55c;&#xae00;" src="images/KO.gif" BORDER=0> <IMG ALT="Italiano" src="images/IT.gif"> <IMG ALT="suomalainen" src="images/FI.gif"> <IMG ALT="danske" src="images/DK.gif"> <IMG ALT="Nederlands" src="images/NL.gif"> <IMG ALT="Svenska" src="images/SWDN.gif"></P>
-<P>GPGMail has been localized in 11 different languages, thanks to contributors. The following languages are included in GPGMail: English, Spanish, Japanese, French, German, Korean, Italian, Finnish, Danish, Dutch and Swedish.</P>
+            <p style="text-align: center">
+              <img alt="English" src="images/US.gif" /> <img alt="Español" src="images/ES.gif" /> <img alt="Japanese" src="images/JP.gif" border="0" /> <a href="http://gpgmail.org/French.lproj/GPGMail.html"><img alt="Français" src="images/FR.gif" border="0" /></a> <img alt="Deutsch" src="images/DE.gif" /> <!--<IMG ALT="Dansk" src="images/DK.gif">--> <img alt="한글" src="images/KO.gif" border="0" /> <img alt="Italiano" src="images/IT.gif" /> <img alt="suomalainen" src="images/FI.gif" /> <img alt="danske" src="images/DK.gif" /> <img alt="Nederlands" src="images/NL.gif" /> <img alt="Svenska" src="images/SWDN.gif" />
+            </p>
 
-<P><IMG src="images/new.gif" ALT="NEW!"> (June 17, 2010) GPGMail Release 1.2.3 (v62) is currently available.<BR>
+            <p>
+              GPGMail has been localized in 11 different languages, thanks to contributors. The following languages are included in GPGMail: English, Spanish, Japanese, French, German, Korean, Italian, Finnish, Danish, Dutch and Swedish.
+            </p>
 
-<P>Information on this page includes:</P>
-<UL>
-<li> <A HREF="index.html#Features">Features</A>
-<li> <A HREF="index.html#Requirements">Requirements</A>
-<li> <A HREF="index.html#License">BSD License</A>
-<li> <A HREF="index.html#Feedback">Feedback</A>
-<li> <A HREF="index.html#MailingList">Mailing-list</A>
-<li> <A HREF="index.html#ReleaseNotes">Release Notes</A><UL><li><A HREF="index.html#KnownBugs">Known bugs</A></LI>
-<li><A HREF="index.html#Suggestions">Ideas for future developments</A></UL>
-<li> <A HREF="index.html#Download">Download</A>
-<li> <A HREF="index.html#Installation">Installation</A>
-<li> <A HREF="faq.html">FAQ</A>
-<li> <A HREF="index.html#More">References</A>
-<li> <A HREF="index.html#Thanks">Thanks</A>
-</UL>
+            <p>
+              <img src="images/new.gif" alt="NEW!" /> (June 17, 2010) GPGMail Release 1.2.3 (v62) is currently available.
+              <br />
+            </p>
 
-<H2><A NAME="Features">Features</A></H2>
+            <p>
+              Information on this page includes:
+            </p>
 
-<P>Once started, Mail has a new submenu, <B>PGP</B>, in its
-<B>Message</B> menu, containing the following items:</P>
-<CENTER><TABLE><TR valign="bottom">
-					<TD>
-                        <img ALT="GPG" src="images/GPG.gif" width="48" height="48" border="0"><BR>
-                        <UL>
-							<li>Decrypt
-							<li>Authenticate
-							<li>Encrypt New Message
-							<li>Encryption Keys<ul>
-				                    <li>Use Passphrase Encryption
-				                    <li>Automatic Choice
-				                    <li>Choose...
-				                    <li>(list of public keys)
-				                </ul>
-							<li>Sign New Message
-							<li>Signing Keys<ul>
-							         <li>(list of secret keys)
-							     </ul>
-							 <li>Force Use of PGP-MIME
-							 <li>Refresh Keys
-						</UL>
-					<TD><IMG src="images/PGPSubMenu.png" ALT="PGP submenu">
-				</TR></TABLE></CENTER>
+            <ul>
+              <li>
+                <a href="index.html#Features">Features</a>
+              </li>
 
-<P>There is also a new submenu, <B>PGP Keys</B>, in menu <B>View</B>, allowing you to choose on-the-fly which attributes must be displayed for keys.</P>
+              <li>
+                <a href="index.html#Requirements">Requirements</a>
+              </li>
 
-<P>Finally, in menu <B>Window</B>, a new item <B>PGP Key Search</B> displays a PGP key search panel when clicked.</P>
+              <li>
+                <a href="index.html#License">BSD License</a>
+              </li>
 
+              <li>
+                <a href="index.html#Feedback">Feedback</a>
+              </li>
 
-<P>Mail also has a new Preferences panel in which you
-can:</P>
-<UL>
-<li>choose your default PGP key
-<li>when to encrypt/sign/decrypt/verify, etc.
-</UL>
-<CENTER><IMG src="images/Preferences.gif" ALT="Preferences panel"></CENTER>
+              <li>
+                <a href="index.html#MailingList">Mailing-list</a>
+              </li>
 
-<P>When composing a new message, some new buttons appear in the composer window:</P>
-<CENTER><IMG src="images/Compose.png" ALT="Compose window"></CENTER>
-<P>They allow you to choose which key you want to sign with, and which keys have to be used for encryption, when enabled. By default, GPGMail will try to find out by itself which keys are needed for encryption, according to the recipients email addresses; keys are listed in the <b>Keys</b> popdown button. In case it misses some keys, a warning icon will be displayed next to the popdown button. At that time you can ask GPGMail to search for missing keys on key servers (if <code>gpg</code> has been configured correctly, using for example <A target="_blank" HREF="http://macgpg.sourceforge.net/">GPGPreferences</A>), using menu item <B>Download...</B> in popdown menu.</P>
-<CENTER><IMG src="images/SearchKeys.png" ALT="PGP Key Search panel"></CENTER>
-<P>In the Composer window, you can also add two toolbar items (by customizing the toolbar) to set the
-encryption (on/off) and add or not your PGP signature; you can also use menu items
-<B>PGP/Encrypt New Message</B> and <B>PGP/Sign New Message</B>. When you compose
-a new message, you can sign it (you will be asked for your key
-passphrase), and/or you can encrypt it. Note that encryption/signature is always applied on the whole message.</P>
-<CENTER><IMG src="images/Signing.png" ALT="Message Authentication panel"></CENTER>
+              <li>
+                <a href="index.html#ReleaseNotes">Release Notes</a>
+                <ul>
+                  <li>
+                    <a href="index.html#KnownBugs">Known bugs</a>
+                  </li>
 
-<P>GPGMail can use two different formats for encryption/signature: if your message consists only of plain text (no attachments, no rich text attributes like bold, italic, etc.), GPGMail will use the old PGP format, with inline ASCII-armored signature/encryption. In the other case, it will use the new OpenPGP/MIME format, with MIME attachments, which is not recognized by some mail agents like Outlook/Entourage/Eudora, but welcomed by Sylpheed, Mulberry and others. If you prefer GPGMail to always use the OpenPGP/MIME format, then you can set it in preferences, or using menu item <B>Message</B>/<B>PGP</B>/<B>Force Use of PGP-MIME</B>.</P>
+                  <li>
+                    <a href="index.html#Suggestions">Ideas for future developments</a>
+                  </li>
+                </ul>
+              </li>
 
-<P>You can also apply some rules to let GPGMail decide when to encrypt/sign a message, according to the recipients. Look at GPGMail Composing preferences, and Robert Goldsmith's <A HREF="index.html#ABKey">ABKey</A> bundle.</P>
+              <li>
+                <a href="index.html#Download">Download</a>
+              </li>
 
-<P>AddressBook groups are also supported: if you use a group's name as a message recipient, and all members of this group have a valid PGP key, then GPGMail will use all these keys.</P>
+              <li>
+                <a href="index.html#Installation">Installation</a>
+              </li>
 
-<P>When you browse through messages, GPGMail can operate automatically, or on-demand. In automatic mode, it tries to authenticate or decrypt the currently selected message; in manual mode, you click on a button/menu to decrypt or authenticate the currently selected message; you can also use the contextual menu.</P>
-<P>After authenticating a message, the signature information is displayed, in short or long form.</P>
+              <li>
+                <a href="faq.html">FAQ</a>
+              </li>
 
-<CENTER><IMG src="images/Decrypting.gif" ALT="Decrypting a message"></CENTER>
+              <li>
+                <a href="index.html#More">References</a>
+              </li>
 
-<P>Encryption/decryption of plain text and MIME messages works.</P>
-<P>Decryption of HTML messages works too, if there's a plain text alternative, but you need to tell Mail to display the plain text alternative after you decrypted the message (menu <B>View</B>/<B>Message</B>/<B>Plain Text Alternative</B>). Don't expect better support in the future!</P>
+              <li>
+                <a href="index.html#Thanks">Thanks</a>
+              </li>
+            </ul>
 
-<P>If you allow passphrase cacheing, passphrase is either stored in cache during
-a small amount of time (default is 60 seconds) - if it has not been used during this time, cache
-is cleared -, or stored in your default keychain. Note that this feature does not work when <CODE>gpg-agent</CODE> is used (bug <a href="https://sourceforge.net/tracker/?func=detail&aid=2471368&group_id=222344&atid=1055153" target="_blank">2471368</a>).</P>
+            <h2>
+              <a name="Features" id="Features">Features</a>
+            </h2>
 
-<H2><A NAME="Requirements">Requirements</A></H2>
-<P>You need <B>MacOS X 10.6.x</B>; GPGMail will not work as-is on other OS versions, because the internals of Apple's Mail changes on every revision.</P>
-<P>You need a <code>gpg</code> version &gt;= 1.4.0 (or <code>gpg2</code>), usually installed in <code>/usr/local/bin/</code>, but GPGMail will search for <code>gpg2</code> then <code>gpg</code> in several locations (<code>/usr/local/bin</code>, <code>/opt/local/bin</code>, <code>/sw/bin</code>) and use the first found one. Or you can change user default <code>GPGOpenPGPExecutablePath</code> to set a different path, or use <A target="_blank" HREF="http://macgpg.sourceforge.net/">GPGPreferences 1.3</A>.</P>
-<P>You can use MacGPG distribution, available at <A target="_blank" HREF="http://macgpg.sourceforge.net/">MacGPG web site</A>, or, for <code>gpg2</code>, <A target="_blank" HREF="http://macgpg2.sourceforge.net/">MacGPG2 web site</A>.</P>
+            <p>
+              Once started, Mail has a new submenu, <strong>PGP</strong>, in its <strong>Message</strong> menu, containing the following items:
+            </p>
 
+            <table>
+              <tr valign="bottom">
+                <td>
+                  <img alt="GPG" src="images/GPG.gif" width="48" height="48" border="0" />
+                  <br />
 
-<H2><A NAME="License">BSD License</A></H2>
+                  <ul>
+                    <li>Decrypt
+                    </li>
 
-<pre>Copyright (c) 2000-2010, St&eacute;phane Corth&eacute;sy <stephane at sente.ch>
+                    <li>Authenticate
+                    </li>
+
+                    <li>Encrypt New Message
+                    </li>
+
+                    <li>Encryption Keys
+                      <ul>
+                        <li>Use Passphrase Encryption
+                        </li>
+
+                        <li>Automatic Choice
+                        </li>
+
+                        <li>Choose...
+                        </li>
+
+                        <li>(list of public keys)
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>Sign New Message
+                    </li>
+
+                    <li>Signing Keys
+                      <ul>
+                        <li>(list of secret keys)
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>Force Use of PGP-MIME
+                    </li>
+
+                    <li>Refresh Keys
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <img src="images/PGPSubMenu.png" alt="PGP submenu" />
+                </td>
+              </tr>
+            </table>
+
+            <br />
+
+            <p>
+              There is also a new submenu, <strong>PGP Keys</strong>, in menu <strong>View</strong>, allowing you to choose on-the-fly which attributes must be displayed for keys.
+            </p>
+
+            <p>
+              Finally, in menu <strong>Window</strong>, a new item <strong>PGP Key Search</strong> displays a PGP key search panel when clicked.
+            </p>
+
+            <p>
+              Mail also has a new Preferences panel in which you can:
+            </p>
+
+            <ul>
+              <li>choose your default PGP key
+              </li>
+
+              <li>when to encrypt/sign/decrypt/verify, etc.
+              </li>
+            </ul>
+            <img src="images/Preferences.gif" alt="Preferences panel" />
+            <br />
+
+            <p>
+              When composing a new message, some new buttons appear in the composer window:
+            </p>
+            <img src="images/Compose.png" alt="Compose window" />
+            <br />
+
+            <p>
+              They allow you to choose which key you want to sign with, and which keys have to be used for encryption, when enabled. By default, GPGMail will try to find out by itself which keys are needed for encryption, according to the recipients email addresses; keys are listed in the <strong>Keys</strong> popdown button. In case it misses some keys, a warning icon will be displayed next to the popdown button. At that time you can ask GPGMail to search for missing keys on key servers (if <code>gpg</code> has been configured correctly, using for example <a target="_blank" href="http://macgpg.sourceforge.net/">GPGPreferences</a>), using menu item <strong>Download...</strong> in popdown menu.
+            </p>
+            <img src="images/SearchKeys.png" alt="PGP Key Search panel" />
+            <br />
+
+            <p>
+              In the Composer window, you can also add two toolbar items (by customizing the toolbar) to set the encryption (on/off) and add or not your PGP signature; you can also use menu items <strong>PGP/Encrypt New Message</strong> and <strong>PGP/Sign New Message</strong>. When you compose a new message, you can sign it (you will be asked for your key passphrase), and/or you can encrypt it. Note that encryption/signature is always applied on the whole message.
+            </p>
+            <img src="images/Signing.png" alt="Message Authentication panel" />
+            <br />
+
+            <p>
+              GPGMail can use two different formats for encryption/signature: if your message consists only of plain text (no attachments, no rich text attributes like bold, italic, etc.), GPGMail will use the old PGP format, with inline ASCII-armored signature/encryption. In the other case, it will use the new OpenPGP/MIME format, with MIME attachments, which is not recognized by some mail agents like Outlook/Entourage/Eudora, but welcomed by Sylpheed, Mulberry and others. If you prefer GPGMail to always use the OpenPGP/MIME format, then you can set it in preferences, or using menu item <strong>Message</strong>/<strong>PGP</strong>/<strong>Force Use of PGP-MIME</strong>.
+            </p>
+
+            <p>
+              You can also apply some rules to let GPGMail decide when to encrypt/sign a message, according to the recipients. Look at GPGMail Composing preferences, and Robert Goldsmith's <a href="index.html#ABKey">ABKey</a> bundle.
+            </p>
+
+            <p>
+              AddressBook groups are also supported: if you use a group's name as a message recipient, and all members of this group have a valid PGP key, then GPGMail will use all these keys.
+            </p>
+
+            <p>
+              When you browse through messages, GPGMail can operate automatically, or on-demand. In automatic mode, it tries to authenticate or decrypt the currently selected message; in manual mode, you click on a button/menu to decrypt or authenticate the currently selected message; you can also use the contextual menu.
+            </p>
+
+            <p>
+              After authenticating a message, the signature information is displayed, in short or long form.
+            </p>
+            <img src="images/Decrypting.gif" alt="Decrypting a message" />
+            <br />
+
+            <p>
+              Encryption/decryption of plain text and MIME messages works.
+            </p>
+
+            <p>
+              Decryption of HTML messages works too, if there's a plain text alternative, but you need to tell Mail to display the plain text alternative after you decrypted the message (menu <strong>View</strong>/<strong>Message</strong>/<strong>Plain Text Alternative</strong>). Don't expect better support in the future!
+            </p>
+
+            <p>
+              If you allow passphrase cacheing, passphrase is either stored in cache during a small amount of time (default is 60 seconds) - if it has not been used during this time, cache is cleared -, or stored in your default keychain. Note that this feature does not work when <code>gpg-agent</code> is used (bug <a href="https://sourceforge.net/tracker/?func=detail&amp;aid=2471368&amp;group_id=222344&amp;atid=1055153" target="_blank">2471368</a>).
+            </p>
+
+            <h2>
+              <a name="Requirements" id="Requirements">Requirements</a>
+            </h2>
+
+            <p>
+              You need <strong>MacOS X 10.6.x</strong>; GPGMail will not work as-is on other OS versions, because the internals of Apple's Mail changes on every revision.
+            </p>
+
+            <p>
+              You need a <code>gpg</code> version &gt;= 1.4.0 (or <code>gpg2</code>), usually installed in <code>/usr/local/bin/</code>, but GPGMail will search for <code>gpg2</code> then <code>gpg</code> in several locations (<code>/usr/local/bin</code>, <code>/opt/local/bin</code>, <code>/sw/bin</code>) and use the first found one. Or you can change user default <code>GPGOpenPGPExecutablePath</code> to set a different path, or use <a target="_blank" href="http://macgpg.sourceforge.net/">GPGPreferences 1.3</a>.
+            </p>
+
+            <p>
+              You can use MacGPG distribution, available at <a target="_blank" href="http://macgpg.sourceforge.net/">MacGPG web site</a>, or, for <code>gpg2</code>, <a target="_blank" href="http://macgpg2.sourceforge.net/">MacGPG2 web site</a>.
+            </p>
+
+            <h2>
+              <a name="License" id="License">BSD License</a>
+            </h2>
+
+            <pre>
+Copyright (c) 2000-2010, Stéphane Corthésy &lt;stephane at sente.ch&gt;
 All rights reserved.
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -149,369 +307,968 @@ modification, are permitted provided that the following conditions are met:
     * Redistributions in binary form must reproduce the above copyright
       notice, this list of conditions and the following disclaimer in the
       documentation and/or other materials provided with the distribution.
-    * Neither the name of St&eacute;phane Corth&eacute;sy nor the names of GPGMail
+    * Neither the name of Stéphane Corthésy nor the names of GPGMail
       contributors may be used to endorse or promote products
       derived from this software without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY ST&Eacute;PHANE CORTH&Eacute;SY AND CONTRIBUTORS ``AS IS'' AND ANY
+THIS SOFTWARE IS PROVIDED BY STÉPHANE CORTHÉSY AND CONTRIBUTORS ``AS IS'' AND ANY
 EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL ST&Eacute;PHANE CORTH&Eacute;SY AND CONTRIBUTORS BE LIABLE FOR ANY
+DISCLAIMED. IN NO EVENT SHALL STÉPHANE CORTHÉSY AND CONTRIBUTORS BE LIABLE FOR ANY
 DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
 (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
 LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
+            <p>
+              Note that some parts of the GPGMail distribution are under <a target="_blank" href="http://www.gnu.org/licenses/gpl.html">LGPL</a> license: the <a target="_blank" href="http://macgpg.sourceforge.net/">MacGPGME</a> framework, the <a target="_blank" href="http://www.gnupg.org/">gpg-error</a> and <a target="_blank" href="http://www.gnupg.org/">gpgme</a> C libraries. The GPGMail license does not apply to these parts.
+            </p>
 
-<P>Note that some parts of the GPGMail distribution are under <A target="_blank" HREF="http://www.gnu.org/licenses/gpl.html">LGPL</A> license: the <A target="_blank" HREF="http://macgpg.sourceforge.net/">MacGPGME</A> framework, the <A target="_blank" HREF="http://www.gnupg.org/">gpg-error</A> and <A target="_blank" HREF="http://www.gnupg.org/">gpgme</A> C libraries. The GPGMail license does not apply to these parts.</P>
-<UL>
-<li><A target="_blank" HREF="http://macgpg.sourceforge.net/">MacGPGME</A>, copyright 2001-2008 MacGPG Project</li>
-<li><A target="_blank" HREF="http://www.gnupg.org/">gpg-error</A>, copyright 2005-2008 g10 Code GmbH</li>
-<li><A target="_blank" HREF="http://www.gnupg.org/">gpgme</A>, copyright 2001-2008 g10 Code GmbH</li>
-</UL>
+            <ul>
+              <li>
+                <a target="_blank" href="http://macgpg.sourceforge.net/">MacGPGME</a>, copyright 2001-2008 MacGPG Project
+              </li>
 
+              <li>
+                <a target="_blank" href="http://www.gnupg.org/">gpg-error</a>, copyright 2005-2008 g10 Code GmbH
+              </li>
 
-<H2><A NAME="Feedback">Feedback</A></H2>
-<P>I appreciate feedback on this software.
-Before sending bug reports or asking for new features, please have a look at the already submitted 
-ones:<UL><LI><A target="_blank" HREF="http://github.com/gpgmail/GPGMail/issues">Bug tracker</A>
-<LI><A target="_blank" HREF="faq.html">FAQ - Frequently Asked Questions</A></UL>
-You can also contact us through the <a href="index.html#MailingList">mailing list</a></P>
-<P><B>If you like it, tell it to me, and to <a target="_blank" href="http://www.apple.com/feedback/macosx.html">Apple</a>, and maybe they will help me to port it to future MacOS X releases.</B> (now that they <a target="_blank" href="http://support.apple.com/kb/TS2486">recognized</a> that GPGMail exists ;-) )</P>
-<P>GPGMail is free software.</P>
+              <li>
+                <a target="_blank" href="http://www.gnupg.org/">gpgme</a>, copyright 2001-2008 g10 Code GmbH
+              </li>
+            </ul>
 
+            <h2>
+              <a name="Feedback" id="Feedback">Feedback</a>
+            </h2>
 
-<H2><A NAME="MailingList">Mailing-list</A></H2>
+            <p>
+              I appreciate feedback on this software. Before sending bug reports or asking for new features, please have a look at the already submitted ones:
+            </p>
 
-<p>There are three mailing lists for GPGMail:</p>
-<ul>
-<li><b>gpgmail-announce</b> - 
-[<a href="http://lists.gpgmail.org/mailman/listinfo/gpgmail-announce">Subscribe</a>] 
-[<a href="http://lists.gpgmail.org/pipermail/gpgmail-announce/">Archives</a>]<br>
-Extremely low traffic list for major announcements and new releases. Read only.
-</li>
+            <ul>
+              <li>
+                <a target="_blank" href="http://github.com/gpgmail/GPGMail/issues">Bug tracker</a>
+              </li>
 
-<li><b>gpgmail-users</b> - 
-[<a href="http://lists.gpgmail.org/mailman/listinfo/gpgmail-users">Subscribe</a>] 
-[<a href="http://lists.gpgmail.org/pipermail/gpgmail-users/">Archives</a>]<br>
-General mailing list for user requests and discussion.
-</li>
+              <li>
+                <a target="_blank" href="faq.html">FAQ - Frequently Asked Questions</a>
+              </li>
+            </ul>
+            You can also contact us through the <a href="index.html#MailingList">mailing list</a>
+            <p>
+              <strong>If you like it, tell it to me, and to <a target="_blank" href="http://www.apple.com/feedback/macosx.html">Apple</a>, and maybe they will help me to port it to future MacOS X releases.</strong> (now that they <a target="_blank" href="http://support.apple.com/kb/TS2486">recognized</a> that GPGMail exists ;-) )
+            </p>
 
-<li><b>gpgmail-devel</b> - 
-[<a href="http://lists.gpgmail.org/mailman/listinfo/gpgmail-devel">Subscribe</a>] 
-[<a href="http://lists.gpgmail.org/pipermail/gpgmail-devel/">Archives</a>]<br>
-Development mailing list for developers and others interested in helping out with GPGMail.
-</li>
-</ul>
+            <p>
+              GPGMail is free software.
+            </p>
 
+            <h2>
+              <a name="MailingList" id="MailingList">Mailing-list</a>
+            </h2>
 
-<H2><A NAME="ReleaseNotes">Release Notes</A></H2>
-<P><IMG src="images/new.gif" ALT="NEW!"> (Dec 30th, 2008) GPGMail 1.2.0 (v56) is currently available:<UL>
-<li>Available for 10.5 Leopard only</li>
-<li>Now under <a href="index.html#License">BSD license</a> (more liberal than before)
-<li>Project now located on <a target="_blank" href="http://sourceforge.net/projects/gpgmail/">SourceForge.net</a>
-<li>Better compatibility when decrypting messages from old mailers (e.g. handles encrypted attachments)
-<li>Added Swedish localization by Erik Hedlund
-<li>Added new keyserver to list (SKS)
-<li>For ASCII encrypted/signed messages, enforces use of quoted-printable - more robust - Thanks to Greg A. Woods
-<li>Fixed support for <code>gpg2</code> (provided that you have a working agent - see <a target="_blank" href="faq.html#gpg2">FAQ</a>)
-<li>Fixed problem with <code>GPGOpenPGPExecutablePath</code> (no longer necessary in most cases - see documentation)
-<li>Fixed bug when sending signed+encrypted (ASCII) message with untrusted recipient, and GPGMail set to trust no key: an exception was logged, instead of being displayed to user.
-<li>Fixed bug: was still signing when automatic signing but no matching account
-<li>Fixed bug with manual choice of encryption keys: message might be sent without encryption/signature
-<li>Fixed bug: draft additional headers were not removed when message was delivered
-<li>Fixed bug with manual choice of keys: choice was lost when displaying again key list
-<li>Fixed bug with AppleScript-generated messages, and redisplayed PGP buttons
-<li>Fixed dependency on <code>/usr/local/bin/gpg</code>
-<li>Fixed positioning of compose accessory view
-<li>Fixed bug with 'verbose' option in gpg.conf file
-<li>Fixed toggle triangle state (showing/hiding the extended signature info)
-<li>Fixed case where public key choice was still automatic even after user chose keys manually
-<li>Fixed initial automatic choice of key according to account
-<li>Fixed initial sign/encrypt settings, when they should be set by default
-<li>Fixed bug with disabled toolbar items on detached viewers
-<li>Fixed UI-compatibility problems with MailTags
-<li>Fixed bug with non-English locales
-<li>Fixed bug with 'Reply to All' button
-<li>No longer supports Tiger (10.4)
-<li>No longer supports Panther (10.3)
-</UL>
-<P>(Feb 5th, 2006) GPGMail 1.1.2 (v46):<UL>
-<li>Last version for Panther/10.3</li>
-<li>Panther: fixed crashes</li>
-<li>Tiger: built as Universal Binary</li>
-<li>Now needs <code>gpg</code> &gt;= 1.4.x</li>
-<li>Tiger: temporarily disabled display of PGP elements in composer window when window is created via AppleScript, to avoid unsolvable bug - you can still change PGP settings via menu Message/PGP.</li>
-<li>Mail no longer freezes when with using untrusted keys for encryption</li>
-<li>Now fills in automatically PGP Key Download search field as soon as a key is missing (except when already performing search/import)</li>
-<li>Fixed passphrase encryption when signature was toggled on</li>
-<li>Fixed crash after message delivery failure</li>
-<li>Dutch localization by Marc-Siebren Kwadijk</li>
-<li>Added hidden user default, <code>GPGOpenPGPExecutablePath</code></li>
-<li>Fixed uncaught exceptions when <code>gpg</code> not configured correctly</li>
-<li>Better error message when error related to specific key</li>
-<li>Better key server-related error messages (not yet localized though)</li>
-<li>Now accepts SHA-256, SHA-384 and SHA-512 hash algorithms</li>
-<li>Fixed compatibility-problem with MailTags</li>
-<li>Fixed sorting of keys in key chooser dialog</li>
-<li>Fixed bug when "only if message is unread" prefs were followed (when checked) even when automatic decryption/authentication was unchecked</li>
-<li>Fixed problem where encryption was not settable until signing had been set, in some cases.</li>
-<li>No longer tries to decrypt text/plain attachments</li>
-<li>Tries to decrypt/verify application/octet-stream attachments</li>
-<li>Fixed alignments in new message window</li>
-</ul>
-<P>(Jul 17th, 2005) GPGMail Release 1.1.1 (v44):<UL>
-<li>Changed keyboard shortcuts for sign/encrypt/decrypt/verify, using same as PGP, because our ones didn't work on Tiger anylonger
-<li>Tiger: Fixed compatibility problem with Enigmail encrypted messages that could not get decrypted
-<li>Fixed unlocalized error message NO_VALID_PRIVATE_KEY
-<li>Tiger: added separator line to compose window (thanks to Felix Schaumburg)
-<li>Changed pref text: reply to <b>PGP</b> encrypted/signed
-<li>Warning icon was no longer displayed when missing PGP keys
-<li>Tiger: toolbar icons take less space now
-<li>Tiger: Encryption/signing works again when performed from menu/toolbar buttons, without PGP buttons in composer
-<li>Tiger: it was no longer possible to choose any PGP keys manually
-<li>Spanish localization by Sergio Rodr&iacute;guez Concha
-<li>Finnish localization fix by Seppo Laaksonen
-<li>Japanese localization by Tomio Arisaka
-<li>Sender's PGP information (sign/encrypt/MIME) stored in AddressBook is no longer evaluated by rules
-<li>When evaluating for reply/forwarded, don't use signed/encrypted information from S/MIME messages
-<li>Fixed German localization
-<li>Added hidden option, <code>GPGAddCustomHeaders</code>
-<li>Tiger: Fixed install on 10.4.1 and later
-<li>Fixed alignment of some items in composer window
-<li>Now links to MacGPGME dynamically, to avoid license problem
-<li>ASCII signed messages: fixed problem with Usenet signatures
-<li>Tiger: fixed auto-decryption/auto-verification of unread messages
-<li>Tiger: fixed refresh problem of compose accessory view when To/CC fields get higher
-<li>Tiger: fixed iPhoto problem
-<li>Added Danish localization by Sebastian Adorj&agrave;n Dyhr
-<li>Fixed some ASCII signature verification problems
-<li>Fixed UI bug when message is created by AppleScript
-<li>Tiger: Fixed assertion failure when verifying messages
-<li>Tiger: Was sometimes failing to report error
-</ul>
-<P>(Apr 29th, 2005) GPGMail Release 1.1 (v42):<UL>
-<li>Added support for Tiger (10.4)
-<li>Fixed invalid display of keys being revoked/expired/disabled/invalid
-<li>Fixed compatibility problem with Windows' EudoraGPG, thanks to Georg Wedemeyer
-<li>Fixed Finnish translation (courtesy of Asko Kauppi)
-<li>Added basic support for AddressBook groups
-<li>Added automatic settings (encryption, signature) based on current context
-<li>Added retrieval of people <code>gpg</code> options from their Address Book card (set by Robert Goldsmith's <A HREF="index.html#ABKey">ABKey</A> bundle)
-<li>No longer tries to use invalid secret key when encrypting
-<li>Got rid of GPGMEProxyServer
-<li>Much faster PGP operations, notably key listing
-<li>When a draft is restored, the encryption and signature states are restored too
-<li>Fixed problem with attachments having non-ASCII filenames: now these chars are replaced by '_', but that doesn't affect final filename, except maybe on old mail clients.
-<li>Fixed bug with default private key which needed to be selected manually to get actually selected
-<li>Lot of new options
-<li>Added PGP-settings conflict resolution panel on delivery
-<li>Now correctly recognizes revoked/disabled keys
-<li>No longer reports wrongly a hash algo choice error instead of the unability to sign
-<li>Only English, French, Finnish and German localizations are complete
-<li>And more... to be documented
-</UL>
-<P>(May 14th, 2004) GPGMail Release 1.0.2 (v37):<UL>
-<li>New icons by Michel Poulain (thanks also to Moritz Guth)
-<li>Corrected default key selection restoration
-<li>Corrected Spanish localization
-<li>Corrected scrolling of signature banner title
-<li>10.2: no longer fails to load 10.3-compiled version, but catches error and reports it to user
-<li>New (hidden) option, <code>GPGRefreshesKeysOnVolumeMount</code>, to disable automatic refresh of keys when volume is (un)mounted; default value is YES.
-<li>New (hidden) option, <code>GPGDisablesSMIME</code>, to totally disable S/MIME encryption/signature. Default value is NO.
-<li>No longer considers text/plain attachments as potential PGP parts
-<li>Fixed incompatibility with PGP7/Outlook: for encrypted messages, always uses <code>content-transfer-encoding: 7bit</code>
-<li>When keychain passphrase was wrong, keychain item was not deleted
-<li>Corrected recognition of disabled/revoked secret/public keys
-<li>User could select revoked private key -> signed message was empty
-<li>New feature: if user shows all keys (no filter), then display key status (revoked/disabled/expired)
-<li>New feature: extended key server list, like in <A target="_blank" HREF="http://macgpg.sourceforge.net/">GPGPreferences</A>
-<li>New feature: show alert when signer's key is revoked/disabled/...
-<li>Fixed: if you select passphrase encryption then turn it back off, the signing option is unticked (when it should be ticked).
-<li>New feature: after encryption failure due to missing keys, user can now select to send unencrypted
-<li>Fixed: 10.3: Account pulldown menu in composer window is randomly greyed. Happens as soon as changing account changes PGP key, from now on.
-<li>10.3: changed disclosure triangle in signature banner
-<li>Compose window: warning icon is now displayed in popdown menu
-<li>Added hidden option <code>GPGUsesAlwaysCRLF</code> to always use CRLF as line-ending for PGP-inline encryption/signing; default value is NO.
-<li>Corrected recognition of disabled/revoked public keys in compose panel
-<li>Fixed enabling/disabling of toolbar/menu items when multiple windows are open
-<li>Fixed rare dead-lock at startup
-<li>Last release with 10.2-compatibility
-</UL>
-<P>(Nov 17th, 2003) GPGMail Release 1.0.1 (v33):<UL>
-<li>When PGPmail is installed, you're no longer forced to quit, but you're warned that it's at your own risks.
-<li>No longer leaves orphan GPGMEProxyServer processes on quit or crash
-<li>Corrected some error messages
-<li>Key search results sometimes didn't display correct names (problem with accents)
-<li>Key search now displays "revoked" status in results
-<li>Now refreshes keys each time a volume has been (un)mounted
-<li>Added Finnish localization by Seppo Laaksonen
-<li>Added Japanese localization by Kory Talmage
-<li>Applied typographical rules to French localization
-<li>Corrected some resizing errors
-<li>Corrected installation problem with FileVault
-<li>Corrected installation problem in <code>/Network/Users/</code>
-<li>Corrected problem with some keys which have ISOLatin1 string encoding for the userIDs, when decrypting/signing
-<li>Installer checks now system version
-<li>No longer leaves a sticky "Done." message in the status view
-<li>Added Korean localization by Sangduk Park
-<li>Corrected problem with other mailers that added an empty line between each line when verifying/decrypting a PGP message
-<li>Replying/forwarding/redirecting a decrypted message now quotes the decrypted message
-</UL>
-<P>(Oct 25th, 2003) GPGMail Release 1.0 (v30):<UL>
-<li>Completely reviewed code; now uses GPGME (indirectly)
-<li>Replaced most of modal dialogs by non-modal ones, &agrave; la Junk Mail
-<li>Added support for KeyChain, thanks to Annard Brouwer
-<li>Added support for multiple secret keys
-<li>User can now choose private/public keys; automatically, or manually
-<li>Added symetric encryption support (encryption without key, only with shared passphrase)
-<li>Preferences panel has been completely revamped, with new options
-<li>New option: enable/disable trust of keys according to web-of-trust
-<li>New option: choose OpenPGP-MIME format; automatically, or manually
-<li>User can use BCC recipients too
-<li>Decryption of encrypted and signed messages no longer fails when when signature cannot be checked (missing key, etc.)
-<li>Corrected AppleScript incompatibility
-<li>New option: sign when encrypting
-<li>New option: decrypt/authenticate automatically only when message is unread
-<li>New option: in passphrase panel, you can display typed passphrase
-<li>When encrypting message, if you miss a key, GPGMail will try to find one on your default keyserver.
-<li>Added ability to search for keys on keyservers.
-<li>New option: line wrapping
-<li>New option: always encrypt
-<li>After computer sleep, passphrase timeout is now reset
-<li>Corrected Installer problem with path containing aliases/links
-<li>Corrected problem with format=flowed
-<li>Now checks presence of PGPmail
-<li>Hash algorithm is set according to your gpg preferences
-<li>Dropped support for 10.1
-<li>Added support for 10.3
-</UL>
-<P>(Sep 10th, 2002) GPGMail Release 0.5.4 (v22):<UL>
-<li>Added Swedish translation from Daniel Aarno
-<li>Added Italian translation from Filippo Stefanelli
-<li>Corrected some glitches with passphrase panel
-<li>No longer leaves files in <code>/tmp</code>
-<li>Added an installer
-<li>Documentation translated in French
-<li>License has been modified
-<li>Corrected Korean translation
-<li>Added support for MacOS X 10.2.x
-<li>Corrected compatibility problem between contextual menu and other Mail plug-ins
-</UL>
-<P>(Jun 23rd, 2002) GPGMail Release 0.5.3 (v20):<UL>
-<li>Added Spanish translation from Sergio Rodr&iacute;guez Concha
-<li>Added French translation from Michel Poulain
-<li>Added Japanese translation from Tomio Arisaka
-<li>Added beautiful icons from Michel Poulain
-<li>Modified "decrypted" icon, by Jamin Wilson
-<li>Added new userDefaults, <code>GPGOpenPGPStyleOnly</code> (default value is NO), to force always using OpenPGP-style encryption/signing
-<li>Corrected problems with attachments which were not yet loaded
-<li>Corrected problem with Kotoeri input method
-<li>Added German translation from Hauke M&uuml;ller
-<li>Added Danish translation from Thomas Dyhr
-<li>Stopped support for MacOS X Server (Rhapsody)
-<li>Added Korean translation from Sangduk Park
-<li>Added support for encapsulated signature (RFC1847); this is now the default method used when encrypting a signed message with OpenPGP style.
-<li>Corrected state of newly added toolbar buttons
-<li>Corrected problems due to character sets (no longer forces use of UTF8)
-<li>Added contextual menu for decryption/authentication
-<li>Corrected header decoding bug
-<li>Corrected signature bug
-<li>Corrected compatibility problems with Sylpheed, Evolution, Entourage, Outlook, Eudora, etc.
-<li>Corrected compatibility problem with MacOS X 10.1.5
-<li>Added basic support for HTML signed/encrypted messages
-<li>Corrected problem with gpg 1.0.7: you no longer need to sign keys before using them for encryption. With gpg 1.0.6, you still need to: if you don't, encryption is refused.
-<li>Corrected problems with <A target="_blank" HREF="http://www.parapunzi.ch/projects/mailpriority/">MailPriority</A> >= 1.1
-</UL>
-<P>(Nov 22nd, 2001) GPGMail Release 0.5.2 (v13):<UL>
-<li>Ported to MacOS X 10.1.x
-<li>Corrected problems with character sets
-<li>Added keyboard shortcuts
-<li>Now needs gpg version >= 1.0.6
-<li>No version for MacOS X Server 1.x
-</UL>
-<P>(Sep 8th, 2001) GPGMail Release 0.5.1 (v8):<UL>
-<li>Ported to MacOS X 10.0.4
-<li>Corrected bugs in the application of RFC 3156
-<li>Corrected lots of other bugs
-</UL>
-<P>(Feb 7th, 2001) GPGMail Release 0.5 (v4): initial release, for MacOS X Server 1.x and MacOS X Public Beta.</P>
+            <p>
+              There are three mailing lists for GPGMail:
+            </p>
 
-<H3><A NAME="KnownBugs">Known bugs</A></H3>
-Bugs are now listed on <a target="_blank" href="http://github.com/gpgmail/GPGMail/issues">Github</a>. You're encouraged to consult the list before reporting bugs;
-you can add comments to existing bug reports.
+            <ul>
+              <li>
+                <strong>gpgmail-announce</strong> - [<a href="http://lists.gpgmail.org/mailman/listinfo/gpgmail-announce">Subscribe</a>] [<a href="http://lists.gpgmail.org/pipermail/gpgmail-announce/">Archives</a>]
+                <br />
+                Extremely low traffic list for major announcements and new releases. Read only.
+              </li>
 
-<H3><A NAME="Suggestions">Ideas for future developments</A></H3>
-You can now submit your ideas and feature requests online at <A target="_blank" HREF="http://github.com/gpgmail/GPGMail/issues">Github</A>. 
+              <li>
+                <strong>gpgmail-users</strong> - [<a href="http://lists.gpgmail.org/mailman/listinfo/gpgmail-users">Subscribe</a>] [<a href="http://lists.gpgmail.org/pipermail/gpgmail-users/">Archives</a>]
+                <br />
+                General mailing list for user requests and discussion.
+              </li>
 
-<H2><A NAME="Download">Download</A></H2>
-<P>The source code as well as precompiled binaries of GPGMail can be downloaded from <a target="_blank" href="http://github.com/gpgmail/GPGMail/downloads"> 
-Github</a>. You need Xcode to compile the sources. You can also consult the <a target="_blank" href="http://github.com/gpgmail/GPGMail">Git repository</a>, 
-and perform a checkout of the most recent source code.</P>
+              <li>
+                <strong>gpgmail-devel</strong> - [<a href="http://lists.gpgmail.org/mailman/listinfo/gpgmail-devel">Subscribe</a>] [<a href="http://lists.gpgmail.org/pipermail/gpgmail-devel/">Archives</a>]
+                <br />
+                Development mailing list for developers and others interested in helping out with GPGMail.
+              </li>
+            </ul>
 
-<P>Old versions for 10.5, 10.4 and 10.3 are available <A HREF="downloads/index.html">here</A>.</P>
+            <h2>
+              <a name="ReleaseNotes" id="ReleaseNotes">Release Notes</a>
+            </h2>
 
-<H2><A NAME="Installation">Installation</A></H2>
-<UL>
-<li>Download and install <code>gpg</code>/<code>gpg2</code>; binaries are available from <A HREF="http://macgpg.sourceforge.net/">MacGPG</A> and <A HREF="http://macgpg2.sourceforge.net/">MacGPG2</A> web sites.
-<li>Create a PGP key if necessary (see <A target="_blank" HREF="http://www.gnupg.org/">GnuPG</A> documentation, or use <A target="_blank" HREF="http://macgpg.sourceforge.net/">GPG Keychain Access</A>)
-<li>Launch the Installer (automatic install), or (manual install)
-<UL>
-<li>Quit Mail
-<li>Delete previous installed version of GPGMail.mailbundle in the folder <code>Library/Mail/Bundles/</code> of your home folder (eventually also in <code>/Library/Mail/Bundles/</code>)
-<li>Copy GPGMail.mailbundle into the folder <code>Library/Mail/Bundles/</code> of your home folder (create folders if necessary)
-<li>In the Terminal, type:<BR>
-<code>defaults write com.apple.mail EnableBundles -bool true</code><BR>
-<code>defaults write com.apple.mail BundleCompatibilityVersion 3</code>
-<li>Restart Mail
-</UL></UL>
+            <p>
+              <img src="images/new.gif" alt="NEW!" /> (Dec 30th, 2008) GPGMail 1.2.0 (v56) is currently available:
+            </p>
 
+            <ul>
+              <li>Available for 10.5 Leopard only
+              </li>
 
-<H2><A NAME="FAQ">Frequently Asked Questions</A></H2>
-<P>I wrote a little FAQ to help you solve most common problems related to GPGMail and gpg. Please, <A HREF="faq.html">have a look at it</A>!</P>
+              <li>Now under <a href="index.html#License">BSD license</a> (more liberal than before)
+              </li>
 
-<H2><A NAME="More">References and further readings</A></H2>
-<OL>
-<li><a target="_blank" href="http://sourceforge.net/projects/gpgmail/">GPGMail project's page</a> on Sourceforge
-<li><A NAME="gnupg">GnuPG</A>, <A target="_blank" HREF="http://www.gnupg.org/">GNU Privacy Guard</A>, official web site.
-<li><A NAME="RFC3156">RFC 3156</A>, <A target="_blank" HREF="http://www.ietf.org/rfc/rfc3156.txt">MIME Security with OpenPGP</A>.
-<li><A NAME="PGP">PGP</A>, <A target="_blank" HREF="http://www.pgpI.org/">The International PGP Home Page</A>.
-<li><A NAME="PGPBook">PGP reference book</A>, <A target="_blank" HREF="http://www.oreilly.com/catalog/pgp/">PGP: Pretty Good Privacy</A>, by Simson Garfinkel.
-<li><A NAME="ezgpg">MacGPG</A>, <A target="_blank" HREF="http://macgpg.sourceforge.net/">Mac GNU Privacy Guard</A>, official web site.
-<li><A NAME="ezgpg2">MacGPG2</A>, <A target="_blank" HREF="http://macgpg2.sourceforge.net/">Mac GNU Privacy Guard 2</A>, official web site.
-<li><A>GPGMail FAQ</A>, <A target="_blank" HREF="faq.html">Frequently Asked Questions</A>.
-<li><A target="_blank" HREF="http://www.bretschneidernet.de/tips/secmua.html">Secure email-clients with PGP/MIME</A>.
-<li><A NAME="ABKey">ABKey</A>, <A target="_blank" HREF="http://abkey.far-blue.co.uk/">Address Book GPG key manager plugin</A>, by Robert S. Goldsmith.
-<li><A NAME="cuk.ch">Cuk.ch</A>, <A target="_blank" HREF="http://www.cuk.ch/articles/2659">PGP-GPG : mettez vos courriers dans des enveloppes</A>, by Olivier Pellerin (in French).
-<li><a name="mio_rhapsody">GnuPG&#x6697;&#x53f7;&#x5316;&#x30e1;&#x30fc;&#x30eb;&#x3092;MacOSX&#x3067;&#x4f7f;&#x304a;&#x3046;</a>, <a target="_blank" href="http://homepage.mac.com/mio_rhapsody/gnupg/index_GnuPG.html">GnuPG&#x3068;GPGMail&#x306e;&#x30a4;&#x30f3;&#x30b9;&#x30c8;&#x30fc;&#x30eb;&#x65b9;&#x6cd5;&#x3068;&#x4f7f;&#x3044;&#x65b9;</a>, by &#x6709;&#x5742;&#x5bcc;&#x96c4; (Tomio Arisaka) (in japanese).
-</OL>
-"PGP" and "Pretty Good Privacy" are registered trademarks of Network Associates, Inc.<BR>
-"GnuPG" is Copyright 1998-2008 Free Software Foundation, Inc.
+              <li>Project now located on <a target="_blank" href="http://sourceforge.net/projects/gpgmail/">SourceForge.net</a>
+              </li>
 
-<H2><A NAME="Thanks">Thanks</A></H2>
-<P>Thanks to Michel Poulain, from <A target="_blank" HREF="http://www.lashampoo.com/">La Shampoo</A>, for the artwork (icons &amp; web site images), feedback, etc.</P>
-<P>Thanks to all beta-testers and users</P>
-<P>Thanks to translators: Sergio Rodr&iacute;guez Concha (Spanish), Michel Poulain (French), Hauke M&uuml;ller (German), Sangduk Park (Korean), Filippo Stefanelli and Roberto Bolzan (Italian), Tomio Arisaka and Kory Talmage (Japanese), Seppo Laaksonen (Finnish), Thomas Dyhr and Sebastian Adorj&aacute;n Dyhr (Danish), Marc-Siebren Kwadijk (Dutch), Daniel Aarno and <a target="_blank" href="http://www.gandoon.com/">Erik Hedlund</a> (Swedish).</P>
-<P>Special thanks to Robert S. Goldsmith, for his bundle, his comments, etc. Thanks!</P>
-<P>One more special thank to Guillaume 'LeChatNoir' for helping me on the project.</P>
+              <li>Better compatibility when decrypting messages from old mailers (e.g. handles encrypted attachments)
+              </li>
 
-<H2>Software Library</H2>
-<P>More Mail plug-ins developed by other people:<UL>
-<li><A target="_blank" HREF="http://www.parapunzi.ch/projects/mailpriority/">MailPriority</A>, by David Frank, to set messages priority
-<li><A target="_blank" HREF="http://www.tikouka.net/mailapp/">Mail.app plugs and suggestions</A>, by Robin Benson, list of all unsupported plug-ins for Mail.app
-<LI><A target="_blank" HREF="http://www.hawkwings.net/plugins.htm">Hawk Wings: Plug-ins and add-ons list</A>, by Tim Gaden, list of all unsupported plug-ins for Mail.app
-<LI><A NAME="ABKey">ABKey</A>, <A target="_blank" HREF="http://abkey.far-blue.co.uk/">Address Book GPG key manager plugin</A>, by Robert S. Goldsmith.
-</UL>
+              <li>Added Swedish localization by Erik Hedlund
+              </li>
 
-<HR NOSHADE SIZE=1><P ALIGN = CENTER>
-<BR>
-&copy;Copyright 2010. All rights reserved.
-<BR>
-Web hosting by <a href="http://www.hubris.net/">Hubris Communications</a>
-</P>		
+              <li>Added new keyserver to list (SKS)
+              </li>
 
-</TD></TR></TABLE></CENTER>
+              <li>For ASCII encrypted/signed messages, enforces use of quoted-printable - more robust - Thanks to Greg A. Woods
+              </li>
 
-</body>
+              <li>Fixed support for <code>gpg2</code> (provided that you have a working agent - see <a target="_blank" href="faq.html#gpg2">FAQ</a>)
+              </li>
+
+              <li>Fixed problem with <code>GPGOpenPGPExecutablePath</code> (no longer necessary in most cases - see documentation)
+              </li>
+
+              <li>Fixed bug when sending signed+encrypted (ASCII) message with untrusted recipient, and GPGMail set to trust no key: an exception was logged, instead of being displayed to user.
+              </li>
+
+              <li>Fixed bug: was still signing when automatic signing but no matching account
+              </li>
+
+              <li>Fixed bug with manual choice of encryption keys: message might be sent without encryption/signature
+              </li>
+
+              <li>Fixed bug: draft additional headers were not removed when message was delivered
+              </li>
+
+              <li>Fixed bug with manual choice of keys: choice was lost when displaying again key list
+              </li>
+
+              <li>Fixed bug with AppleScript-generated messages, and redisplayed PGP buttons
+              </li>
+
+              <li>Fixed dependency on <code>/usr/local/bin/gpg</code>
+              </li>
+
+              <li>Fixed positioning of compose accessory view
+              </li>
+
+              <li>Fixed bug with 'verbose' option in gpg.conf file
+              </li>
+
+              <li>Fixed toggle triangle state (showing/hiding the extended signature info)
+              </li>
+
+              <li>Fixed case where public key choice was still automatic even after user chose keys manually
+              </li>
+
+              <li>Fixed initial automatic choice of key according to account
+              </li>
+
+              <li>Fixed initial sign/encrypt settings, when they should be set by default
+              </li>
+
+              <li>Fixed bug with disabled toolbar items on detached viewers
+              </li>
+
+              <li>Fixed UI-compatibility problems with MailTags
+              </li>
+
+              <li>Fixed bug with non-English locales
+              </li>
+
+              <li>Fixed bug with 'Reply to All' button
+              </li>
+
+              <li>No longer supports Tiger (10.4)
+              </li>
+
+              <li>No longer supports Panther (10.3)
+              </li>
+            </ul>
+
+            <p>
+              (Feb 5th, 2006) GPGMail 1.1.2 (v46):
+            </p>
+
+            <ul>
+              <li>Last version for Panther/10.3
+              </li>
+
+              <li>Panther: fixed crashes
+              </li>
+
+              <li>Tiger: built as Universal Binary
+              </li>
+
+              <li>Now needs <code>gpg</code> &gt;= 1.4.x
+              </li>
+
+              <li>Tiger: temporarily disabled display of PGP elements in composer window when window is created via AppleScript, to avoid unsolvable bug - you can still change PGP settings via menu Message/PGP.
+              </li>
+
+              <li>Mail no longer freezes when with using untrusted keys for encryption
+              </li>
+
+              <li>Now fills in automatically PGP Key Download search field as soon as a key is missing (except when already performing search/import)
+              </li>
+
+              <li>Fixed passphrase encryption when signature was toggled on
+              </li>
+
+              <li>Fixed crash after message delivery failure
+              </li>
+
+              <li>Dutch localization by Marc-Siebren Kwadijk
+              </li>
+
+              <li>Added hidden user default, <code>GPGOpenPGPExecutablePath</code>
+              </li>
+
+              <li>Fixed uncaught exceptions when <code>gpg</code> not configured correctly
+              </li>
+
+              <li>Better error message when error related to specific key
+              </li>
+
+              <li>Better key server-related error messages (not yet localized though)
+              </li>
+
+              <li>Now accepts SHA-256, SHA-384 and SHA-512 hash algorithms
+              </li>
+
+              <li>Fixed compatibility-problem with MailTags
+              </li>
+
+              <li>Fixed sorting of keys in key chooser dialog
+              </li>
+
+              <li>Fixed bug when "only if message is unread" prefs were followed (when checked) even when automatic decryption/authentication was unchecked
+              </li>
+
+              <li>Fixed problem where encryption was not settable until signing had been set, in some cases.
+              </li>
+
+              <li>No longer tries to decrypt text/plain attachments
+              </li>
+
+              <li>Tries to decrypt/verify application/octet-stream attachments
+              </li>
+
+              <li>Fixed alignments in new message window
+              </li>
+            </ul>
+
+            <p>
+              (Jul 17th, 2005) GPGMail Release 1.1.1 (v44):
+            </p>
+
+            <ul>
+              <li>Changed keyboard shortcuts for sign/encrypt/decrypt/verify, using same as PGP, because our ones didn't work on Tiger anylonger
+              </li>
+
+              <li>Tiger: Fixed compatibility problem with Enigmail encrypted messages that could not get decrypted
+              </li>
+
+              <li>Fixed unlocalized error message NO_VALID_PRIVATE_KEY
+              </li>
+
+              <li>Tiger: added separator line to compose window (thanks to Felix Schaumburg)
+              </li>
+
+              <li>Changed pref text: reply to <strong>PGP</strong> encrypted/signed
+              </li>
+
+              <li>Warning icon was no longer displayed when missing PGP keys
+              </li>
+
+              <li>Tiger: toolbar icons take less space now
+              </li>
+
+              <li>Tiger: Encryption/signing works again when performed from menu/toolbar buttons, without PGP buttons in composer
+              </li>
+
+              <li>Tiger: it was no longer possible to choose any PGP keys manually
+              </li>
+
+              <li>Spanish localization by Sergio Rodríguez Concha
+              </li>
+
+              <li>Finnish localization fix by Seppo Laaksonen
+              </li>
+
+              <li>Japanese localization by Tomio Arisaka
+              </li>
+
+              <li>Sender's PGP information (sign/encrypt/MIME) stored in AddressBook is no longer evaluated by rules
+              </li>
+
+              <li>When evaluating for reply/forwarded, don't use signed/encrypted information from S/MIME messages
+              </li>
+
+              <li>Fixed German localization
+              </li>
+
+              <li>Added hidden option, <code>GPGAddCustomHeaders</code>
+              </li>
+
+              <li>Tiger: Fixed install on 10.4.1 and later
+              </li>
+
+              <li>Fixed alignment of some items in composer window
+              </li>
+
+              <li>Now links to MacGPGME dynamically, to avoid license problem
+              </li>
+
+              <li>ASCII signed messages: fixed problem with Usenet signatures
+              </li>
+
+              <li>Tiger: fixed auto-decryption/auto-verification of unread messages
+              </li>
+
+              <li>Tiger: fixed refresh problem of compose accessory view when To/CC fields get higher
+              </li>
+
+              <li>Tiger: fixed iPhoto problem
+              </li>
+
+              <li>Added Danish localization by Sebastian Adorjàn Dyhr
+              </li>
+
+              <li>Fixed some ASCII signature verification problems
+              </li>
+
+              <li>Fixed UI bug when message is created by AppleScript
+              </li>
+
+              <li>Tiger: Fixed assertion failure when verifying messages
+              </li>
+
+              <li>Tiger: Was sometimes failing to report error
+              </li>
+            </ul>
+
+            <p>
+              (Apr 29th, 2005) GPGMail Release 1.1 (v42):
+            </p>
+
+            <ul>
+              <li>Added support for Tiger (10.4)
+              </li>
+
+              <li>Fixed invalid display of keys being revoked/expired/disabled/invalid
+              </li>
+
+              <li>Fixed compatibility problem with Windows' EudoraGPG, thanks to Georg Wedemeyer
+              </li>
+
+              <li>Fixed Finnish translation (courtesy of Asko Kauppi)
+              </li>
+
+              <li>Added basic support for AddressBook groups
+              </li>
+
+              <li>Added automatic settings (encryption, signature) based on current context
+              </li>
+
+              <li>Added retrieval of people <code>gpg</code> options from their Address Book card (set by Robert Goldsmith's <a href="index.html#ABKey">ABKey</a> bundle)
+              </li>
+
+              <li>No longer tries to use invalid secret key when encrypting
+              </li>
+
+              <li>Got rid of GPGMEProxyServer
+              </li>
+
+              <li>Much faster PGP operations, notably key listing
+              </li>
+
+              <li>When a draft is restored, the encryption and signature states are restored too
+              </li>
+
+              <li>Fixed problem with attachments having non-ASCII filenames: now these chars are replaced by '_', but that doesn't affect final filename, except maybe on old mail clients.
+              </li>
+
+              <li>Fixed bug with default private key which needed to be selected manually to get actually selected
+              </li>
+
+              <li>Lot of new options
+              </li>
+
+              <li>Added PGP-settings conflict resolution panel on delivery
+              </li>
+
+              <li>Now correctly recognizes revoked/disabled keys
+              </li>
+
+              <li>No longer reports wrongly a hash algo choice error instead of the unability to sign
+              </li>
+
+              <li>Only English, French, Finnish and German localizations are complete
+              </li>
+
+              <li>And more... to be documented
+              </li>
+            </ul>
+
+            <p>
+              (May 14th, 2004) GPGMail Release 1.0.2 (v37):
+            </p>
+
+            <ul>
+              <li>New icons by Michel Poulain (thanks also to Moritz Guth)
+              </li>
+
+              <li>Corrected default key selection restoration
+              </li>
+
+              <li>Corrected Spanish localization
+              </li>
+
+              <li>Corrected scrolling of signature banner title
+              </li>
+
+              <li>10.2: no longer fails to load 10.3-compiled version, but catches error and reports it to user
+              </li>
+
+              <li>New (hidden) option, <code>GPGRefreshesKeysOnVolumeMount</code>, to disable automatic refresh of keys when volume is (un)mounted; default value is YES.
+              </li>
+
+              <li>New (hidden) option, <code>GPGDisablesSMIME</code>, to totally disable S/MIME encryption/signature. Default value is NO.
+              </li>
+
+              <li>No longer considers text/plain attachments as potential PGP parts
+              </li>
+
+              <li>Fixed incompatibility with PGP7/Outlook: for encrypted messages, always uses <code>content-transfer-encoding: 7bit</code>
+              </li>
+
+              <li>When keychain passphrase was wrong, keychain item was not deleted
+              </li>
+
+              <li>Corrected recognition of disabled/revoked secret/public keys
+              </li>
+
+              <li>User could select revoked private key -&gt; signed message was empty
+              </li>
+
+              <li>New feature: if user shows all keys (no filter), then display key status (revoked/disabled/expired)
+              </li>
+
+              <li>New feature: extended key server list, like in <a target="_blank" href="http://macgpg.sourceforge.net/">GPGPreferences</a>
+              </li>
+
+              <li>New feature: show alert when signer's key is revoked/disabled/...
+              </li>
+
+              <li>Fixed: if you select passphrase encryption then turn it back off, the signing option is unticked (when it should be ticked).
+              </li>
+
+              <li>New feature: after encryption failure due to missing keys, user can now select to send unencrypted
+              </li>
+
+              <li>Fixed: 10.3: Account pulldown menu in composer window is randomly greyed. Happens as soon as changing account changes PGP key, from now on.
+              </li>
+
+              <li>10.3: changed disclosure triangle in signature banner
+              </li>
+
+              <li>Compose window: warning icon is now displayed in popdown menu
+              </li>
+
+              <li>Added hidden option <code>GPGUsesAlwaysCRLF</code> to always use CRLF as line-ending for PGP-inline encryption/signing; default value is NO.
+              </li>
+
+              <li>Corrected recognition of disabled/revoked public keys in compose panel
+              </li>
+
+              <li>Fixed enabling/disabling of toolbar/menu items when multiple windows are open
+              </li>
+
+              <li>Fixed rare dead-lock at startup
+              </li>
+
+              <li>Last release with 10.2-compatibility
+              </li>
+            </ul>
+
+            <p>
+              (Nov 17th, 2003) GPGMail Release 1.0.1 (v33):
+            </p>
+
+            <ul>
+              <li>When PGPmail is installed, you're no longer forced to quit, but you're warned that it's at your own risks.
+              </li>
+
+              <li>No longer leaves orphan GPGMEProxyServer processes on quit or crash
+              </li>
+
+              <li>Corrected some error messages
+              </li>
+
+              <li>Key search results sometimes didn't display correct names (problem with accents)
+              </li>
+
+              <li>Key search now displays "revoked" status in results
+              </li>
+
+              <li>Now refreshes keys each time a volume has been (un)mounted
+              </li>
+
+              <li>Added Finnish localization by Seppo Laaksonen
+              </li>
+
+              <li>Added Japanese localization by Kory Talmage
+              </li>
+
+              <li>Applied typographical rules to French localization
+              </li>
+
+              <li>Corrected some resizing errors
+              </li>
+
+              <li>Corrected installation problem with FileVault
+              </li>
+
+              <li>Corrected installation problem in <code>/Network/Users/</code>
+              </li>
+
+              <li>Corrected problem with some keys which have ISOLatin1 string encoding for the userIDs, when decrypting/signing
+              </li>
+
+              <li>Installer checks now system version
+              </li>
+
+              <li>No longer leaves a sticky "Done." message in the status view
+              </li>
+
+              <li>Added Korean localization by Sangduk Park
+              </li>
+
+              <li>Corrected problem with other mailers that added an empty line between each line when verifying/decrypting a PGP message
+              </li>
+
+              <li>Replying/forwarding/redirecting a decrypted message now quotes the decrypted message
+              </li>
+            </ul>
+
+            <p>
+              (Oct 25th, 2003) GPGMail Release 1.0 (v30):
+            </p>
+
+            <ul>
+              <li>Completely reviewed code; now uses GPGME (indirectly)
+              </li>
+
+              <li>Replaced most of modal dialogs by non-modal ones, à la Junk Mail
+              </li>
+
+              <li>Added support for KeyChain, thanks to Annard Brouwer
+              </li>
+
+              <li>Added support for multiple secret keys
+              </li>
+
+              <li>User can now choose private/public keys; automatically, or manually
+              </li>
+
+              <li>Added symetric encryption support (encryption without key, only with shared passphrase)
+              </li>
+
+              <li>Preferences panel has been completely revamped, with new options
+              </li>
+
+              <li>New option: enable/disable trust of keys according to web-of-trust
+              </li>
+
+              <li>New option: choose OpenPGP-MIME format; automatically, or manually
+              </li>
+
+              <li>User can use BCC recipients too
+              </li>
+
+              <li>Decryption of encrypted and signed messages no longer fails when when signature cannot be checked (missing key, etc.)
+              </li>
+
+              <li>Corrected AppleScript incompatibility
+              </li>
+
+              <li>New option: sign when encrypting
+              </li>
+
+              <li>New option: decrypt/authenticate automatically only when message is unread
+              </li>
+
+              <li>New option: in passphrase panel, you can display typed passphrase
+              </li>
+
+              <li>When encrypting message, if you miss a key, GPGMail will try to find one on your default keyserver.
+              </li>
+
+              <li>Added ability to search for keys on keyservers.
+              </li>
+
+              <li>New option: line wrapping
+              </li>
+
+              <li>New option: always encrypt
+              </li>
+
+              <li>After computer sleep, passphrase timeout is now reset
+              </li>
+
+              <li>Corrected Installer problem with path containing aliases/links
+              </li>
+
+              <li>Corrected problem with format=flowed
+              </li>
+
+              <li>Now checks presence of PGPmail
+              </li>
+
+              <li>Hash algorithm is set according to your gpg preferences
+              </li>
+
+              <li>Dropped support for 10.1
+              </li>
+
+              <li>Added support for 10.3
+              </li>
+            </ul>
+
+            <p>
+              (Sep 10th, 2002) GPGMail Release 0.5.4 (v22):
+            </p>
+
+            <ul>
+              <li>Added Swedish translation from Daniel Aarno
+              </li>
+
+              <li>Added Italian translation from Filippo Stefanelli
+              </li>
+
+              <li>Corrected some glitches with passphrase panel
+              </li>
+
+              <li>No longer leaves files in <code>/tmp</code>
+              </li>
+
+              <li>Added an installer
+              </li>
+
+              <li>Documentation translated in French
+              </li>
+
+              <li>License has been modified
+              </li>
+
+              <li>Corrected Korean translation
+              </li>
+
+              <li>Added support for MacOS X 10.2.x
+              </li>
+
+              <li>Corrected compatibility problem between contextual menu and other Mail plug-ins
+              </li>
+            </ul>
+
+            <p>
+              (Jun 23rd, 2002) GPGMail Release 0.5.3 (v20):
+            </p>
+
+            <ul>
+              <li>Added Spanish translation from Sergio Rodríguez Concha
+              </li>
+
+              <li>Added French translation from Michel Poulain
+              </li>
+
+              <li>Added Japanese translation from Tomio Arisaka
+              </li>
+
+              <li>Added beautiful icons from Michel Poulain
+              </li>
+
+              <li>Modified "decrypted" icon, by Jamin Wilson
+              </li>
+
+              <li>Added new userDefaults, <code>GPGOpenPGPStyleOnly</code> (default value is NO), to force always using OpenPGP-style encryption/signing
+              </li>
+
+              <li>Corrected problems with attachments which were not yet loaded
+              </li>
+
+              <li>Corrected problem with Kotoeri input method
+              </li>
+
+              <li>Added German translation from Hauke Müller
+              </li>
+
+              <li>Added Danish translation from Thomas Dyhr
+              </li>
+
+              <li>Stopped support for MacOS X Server (Rhapsody)
+              </li>
+
+              <li>Added Korean translation from Sangduk Park
+              </li>
+
+              <li>Added support for encapsulated signature (RFC1847); this is now the default method used when encrypting a signed message with OpenPGP style.
+              </li>
+
+              <li>Corrected state of newly added toolbar buttons
+              </li>
+
+              <li>Corrected problems due to character sets (no longer forces use of UTF8)
+              </li>
+
+              <li>Added contextual menu for decryption/authentication
+              </li>
+
+              <li>Corrected header decoding bug
+              </li>
+
+              <li>Corrected signature bug
+              </li>
+
+              <li>Corrected compatibility problems with Sylpheed, Evolution, Entourage, Outlook, Eudora, etc.
+              </li>
+
+              <li>Corrected compatibility problem with MacOS X 10.1.5
+              </li>
+
+              <li>Added basic support for HTML signed/encrypted messages
+              </li>
+
+              <li>Corrected problem with gpg 1.0.7: you no longer need to sign keys before using them for encryption. With gpg 1.0.6, you still need to: if you don't, encryption is refused.
+              </li>
+
+              <li>Corrected problems with <a target="_blank" href="http://www.parapunzi.ch/projects/mailpriority/">MailPriority</a> &gt;= 1.1
+              </li>
+            </ul>
+
+            <p>
+              (Nov 22nd, 2001) GPGMail Release 0.5.2 (v13):
+            </p>
+
+            <ul>
+              <li>Ported to MacOS X 10.1.x
+              </li>
+
+              <li>Corrected problems with character sets
+              </li>
+
+              <li>Added keyboard shortcuts
+              </li>
+
+              <li>Now needs gpg version &gt;= 1.0.6
+              </li>
+
+              <li>No version for MacOS X Server 1.x
+              </li>
+            </ul>
+
+            <p>
+              (Sep 8th, 2001) GPGMail Release 0.5.1 (v8):
+            </p>
+
+            <ul>
+              <li>Ported to MacOS X 10.0.4
+              </li>
+
+              <li>Corrected bugs in the application of RFC 3156
+              </li>
+
+              <li>Corrected lots of other bugs
+              </li>
+            </ul>
+
+            <p>
+              (Feb 7th, 2001) GPGMail Release 0.5 (v4): initial release, for MacOS X Server 1.x and MacOS X Public Beta.
+            </p>
+
+            <h3>
+              <a name="KnownBugs" id="KnownBugs">Known bugs</a>
+            </h3>
+            Bugs are now listed on <a target="_blank" href="http://github.com/gpgmail/GPGMail/issues">Github</a>. You're encouraged to consult the list before reporting bugs; you can add comments to existing bug reports.
+            <h3>
+              <a name="Suggestions" id="Suggestions">Ideas for future developments</a>
+            </h3>
+            You can now submit your ideas and feature requests online at <a target="_blank" href="http://github.com/gpgmail/GPGMail/issues">Github</a>.
+            <h2>
+              <a name="Download" id="Download">Download</a>
+            </h2>
+
+            <p>
+              The source code as well as precompiled binaries of GPGMail can be downloaded from <a target="_blank" href="http://github.com/gpgmail/GPGMail/downloads">Github</a>. You need Xcode to compile the sources. You can also consult the <a target="_blank" href="http://github.com/gpgmail/GPGMail">Git repository</a>, and perform a checkout of the most recent source code.
+            </p>
+
+            <p>
+              Old versions for 10.5, 10.4 and 10.3 are available <a href="downloads/index.html">here</a>.
+            </p>
+
+            <h2>
+              <a name="Installation" id="Installation">Installation</a>
+            </h2>
+
+            <ul>
+              <li>Download and install <code>gpg</code>/<code>gpg2</code>; binaries are available from <a href="http://macgpg.sourceforge.net/">MacGPG</a> and <a href="http://macgpg2.sourceforge.net/">MacGPG2</a> web sites.
+              </li>
+
+              <li>Create a PGP key if necessary (see <a target="_blank" href="http://www.gnupg.org/">GnuPG</a> documentation, or use <a target="_blank" href="http://macgpg.sourceforge.net/">GPG Keychain Access</a>)
+              </li>
+
+              <li>Launch the Installer (automatic install), or (manual install)
+                <ul>
+                  <li>Quit Mail
+                  </li>
+
+                  <li>Delete previous installed version of GPGMail.mailbundle in the folder <code>Library/Mail/Bundles/</code> of your home folder (eventually also in <code>/Library/Mail/Bundles/</code>)
+                  </li>
+
+                  <li>Copy GPGMail.mailbundle into the folder <code>Library/Mail/Bundles/</code> of your home folder (create folders if necessary)
+                  </li>
+
+                  <li>In the Terminal, type:
+                    <br />
+                    <code>defaults write com.apple.mail EnableBundles -bool true</code>
+                    <br />
+                    <code>defaults write com.apple.mail BundleCompatibilityVersion 3</code>
+                  </li>
+
+                  <li>Restart Mail
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <h2>
+              <a name="FAQ" id="FAQ">Frequently Asked Questions</a>
+            </h2>
+
+            <p>
+              I wrote a little FAQ to help you solve most common problems related to GPGMail and gpg. Please, <a href="faq.html">have a look at it</a>!
+            </p>
+
+            <h2>
+              <a name="More" id="More">References and further readings</a>
+            </h2>
+
+            <ol>
+              <li>
+                <a target="_blank" href="http://sourceforge.net/projects/gpgmail/">GPGMail project's page</a> on Sourceforge
+              </li>
+
+              <li>
+                <a name="gnupg" id="gnupg">GnuPG</a>, <a target="_blank" href="http://www.gnupg.org/">GNU Privacy Guard</a>, official web site.
+              </li>
+
+              <li>
+                <a name="RFC3156" id="RFC3156">RFC 3156</a>, <a target="_blank" href="http://www.ietf.org/rfc/rfc3156.txt">MIME Security with OpenPGP</a>.
+              </li>
+
+              <li>
+                <a name="PGP" id="PGP">PGP</a>, <a target="_blank" href="http://www.pgpI.org/">The International PGP Home Page</a>.
+              </li>
+
+              <li>
+                <a name="PGPBook" id="PGPBook">PGP reference book</a>, <a target="_blank" href="http://www.oreilly.com/catalog/pgp/">PGP: Pretty Good Privacy</a>, by Simson Garfinkel.
+              </li>
+
+              <li>
+                <a name="ezgpg" id="ezgpg">MacGPG</a>, <a target="_blank" href="http://macgpg.sourceforge.net/">Mac GNU Privacy Guard</a>, official web site.
+              </li>
+
+              <li>
+                <a name="ezgpg2" id="ezgpg2">MacGPG2</a>, <a target="_blank" href="http://macgpg2.sourceforge.net/">Mac GNU Privacy Guard 2</a>, official web site.
+              </li>
+
+              <li>
+                <a>GPGMail FAQ</a>, <a target="_blank" href="faq.html">Frequently Asked Questions</a>.
+              </li>
+
+              <li>
+                <a target="_blank" href="http://www.bretschneidernet.de/tips/secmua.html">Secure email-clients with PGP/MIME</a>.
+              </li>
+
+              <li>
+                <a name="ABKey" id="ABKey">ABKey</a>, <a target="_blank" href="http://abkey.far-blue.co.uk/">Address Book GPG key manager plugin</a>, by Robert S. Goldsmith.
+              </li>
+
+              <li>
+                <a name="cuk.ch" id="cuk.ch">Cuk.ch</a>, <a target="_blank" href="http://www.cuk.ch/articles/2659">PGP-GPG : mettez vos courriers dans des enveloppes</a>, by Olivier Pellerin (in French).
+              </li>
+
+              <li>
+                <a name="mio_rhapsody" id="mio_rhapsody">GnuPG暗号化メールをMacOSXで使おう</a>, <a target="_blank" href="http://homepage.mac.com/mio_rhapsody/gnupg/index_GnuPG.html">GnuPGとGPGMailのインストール方法と使い方</a>, by 有坂富雄 (Tomio Arisaka) (in japanese).
+              </li>
+            </ol>
+            "PGP" and "Pretty Good Privacy" are registered trademarks of Network Associates, Inc.
+            <br />
+            "GnuPG" is Copyright 1998-2008 Free Software Foundation, Inc.
+            <h2>
+              <a name="Thanks" id="Thanks">Thanks</a>
+            </h2>
+
+            <p>
+              Thanks to Michel Poulain, from <a target="_blank" href="http://www.lashampoo.com/">La Shampoo</a>, for the artwork (icons &amp; web site images), feedback, etc.
+            </p>
+
+            <p>
+              Thanks to all beta-testers and users
+            </p>
+
+            <p>
+              Thanks to translators: Sergio Rodríguez Concha (Spanish), Michel Poulain (French), Hauke Müller (German), Sangduk Park (Korean), Filippo Stefanelli and Roberto Bolzan (Italian), Tomio Arisaka and Kory Talmage (Japanese), Seppo Laaksonen (Finnish), Thomas Dyhr and Sebastian Adorján Dyhr (Danish), Marc-Siebren Kwadijk (Dutch), Daniel Aarno and <a target="_blank" href="http://www.gandoon.com/">Erik Hedlund</a> (Swedish).
+            </p>
+
+            <p>
+              Special thanks to Robert S. Goldsmith, for his bundle, his comments, etc. Thanks!
+            </p>
+
+            <p>
+              One more special thank to Guillaume 'LeChatNoir' for helping me on the project.
+            </p>
+
+            <h2>
+              Software Library
+            </h2>
+
+            <p>
+              More Mail plug-ins developed by other people:
+            </p>
+
+            <ul>
+              <li>
+                <a target="_blank" href="http://www.parapunzi.ch/projects/mailpriority/">MailPriority</a>, by David Frank, to set messages priority
+              </li>
+
+              <li>
+                <a target="_blank" href="http://www.tikouka.net/mailapp/">Mail.app plugs and suggestions</a>, by Robin Benson, list of all unsupported plug-ins for Mail.app
+              </li>
+
+              <li>
+                <a target="_blank" href="http://www.hawkwings.net/plugins.htm">Hawk Wings: Plug-ins and add-ons list</a>, by Tim Gaden, list of all unsupported plug-ins for Mail.app
+              </li>
+            </ul>
+
+            <hr noshade="noshade" size="1" />
+
+            <p style="text-align: center">
+              <br />
+              ©Copyright 2010. All rights reserved.
+              <br />
+              Web hosting by <a href="http://www.hubris.net/">Hubris Communications</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <p>
+      <br />
+    </p>
+  </body>
 </html>
